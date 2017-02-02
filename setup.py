@@ -6,8 +6,6 @@ def read(*names):
     return open(pathlib.Path(pathlib.Path(__file__).parent, *names)).read()
 
 install_requires = [
-    'setuptools>=34.0.0',
-    'pip>=9.0.0',
     'paramiko'
 ]
 
@@ -18,9 +16,18 @@ setup(
     package_dir={'': 'src'},
     namespace_packages=['putty'],
     url='https://github.com/KalleDK/putty.settings.git',
-    license='',
-    author='km',
+    license='MIT',
+    author='Kalle R. Møller',
     author_email='python@k-moeller.dk',
-    description='Putty to known_hosts',
-    install_requires=install_requires
+    description='Bindings for Putty\'s settings',
+    install_requires=install_requires,
+    classifiers=[
+        'Development Status :: 3 - Alpha',
+        'Intended Audience :: Developers',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3.6',
+        'Operating System :: Microsoft',
+    ],
+    keywords='putty paramiko development',
 )
